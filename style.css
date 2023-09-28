@@ -97,6 +97,27 @@ footer {
     margin: auto;
     height: 100%;
     background-color: white;
-    border-radius: 16px;
+    border-radius: 1rem;
     box-shadow: 0px 36px 105px 0px rgba(43, 56, 76, 0.10);
+    display: flex;
+    align-content: center;
+}
+
+.hero_img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero_img img{
+    width: 400px;
+    height: 400px;
+    border-radius: 1rem;
+}
+
+.Home article{
+    width: 50%;
+
 }
