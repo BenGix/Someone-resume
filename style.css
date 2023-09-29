@@ -74,7 +74,7 @@ aside {
     position: fixed;
     width: 8rem;
     top: 5rem;
-    left: -10rem;
+    left: -50rem;
     transition: all 1s ease;
 }
 
@@ -141,7 +141,6 @@ footer ul {
 .page {
     max-width: 70rem;
     margin: auto;
-
     display: flex;
     align-content: center;
 }
@@ -157,6 +156,8 @@ footer ul {
 .hero_img {
     margin: auto 5rem auto 10rem;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .hero_img img {
@@ -167,7 +168,6 @@ footer ul {
 }
 
 article {
-    width: 50%;
     margin: auto 5rem auto 3rem;
 }
 
@@ -258,7 +258,6 @@ button {
 }
 
 .research_card {
-    width: 60%;
     display: grid;
     gap: 1rem;
     grid-template-columns: auto auto;
@@ -439,3 +438,26 @@ form button {
     color: #fff;
     height: 1rem;
 }
+
+@media screen and (max-width: 1280px) {
+     aside ul{
+        margin-left: -6rem;
+        transform: scale(.8);    }
+  }
+
+  @media screen and (max-width: 910px) {
+    .page{
+       flex-direction: column;
+    }
+    .hero_img{
+        margin: auto;
+    }
+    
+    aside ul{
+        position: absolute;
+        top: 570px;
+        display: flex;
+        flex-direction: row;
+        left: -10px;
+    }
+ }
