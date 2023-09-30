@@ -57,6 +57,35 @@ nav {
     top: 0;
 }
 
+.collapsible {
+    display: none;
+    background-color: #A53DFF;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 75px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible-nav{
+    display: block; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+#content{
+    background-color: white;
+}
+
 ul {
     display: flex;
     appearance: none;
@@ -64,17 +93,16 @@ ul {
 }
 
 .active {
-    border-radius: 4px;
+    border-radius: 2px;
     background: var(--primary-500, #A53DFF);
     color: white !important;
 }
 
 aside {
-    z-index: 1000;
     position: fixed;
     width: 8rem;
     top: 5rem;
-    left: -50rem;
+    left: -100rem;
     transition: all 1s ease;
 }
 
@@ -122,10 +150,11 @@ section:nth-child(even) {
 
 section {
     width: 100%;
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 footer {
+    z-index: 100;
     background: #2B384C;
 }
 
@@ -155,9 +184,10 @@ footer ul {
 
 .hero_img {
     margin: auto 5rem auto 10rem;
-    position: relative;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero_img img {
@@ -171,6 +201,10 @@ article {
     margin: auto 5rem auto 3rem;
 }
 
+.social_media {
+    width: 55%;
+}
+
 .btn-container {
     display: flex;
     justify-content: center;
@@ -178,14 +212,12 @@ article {
     padding: .5rem;
     background-color: white;
     border-radius: 4px;
-    position: absolute;
     height: auto;
-    bottom: -20px;
-    right: 45px;
     box-shadow: 0px 12px 64px 0px rgba(28, 25, 25, 0.12);
     height: 3rem;
     padding: 0;
-
+    align-items: center;
+    margin-top: -2rem;
 }
 
 .btn-container a {
@@ -249,6 +281,7 @@ button {
     cursor: pointer;
     transition: all 0.3s ease-in;
     border: none;
+    margin: 1rem 0;
 }
 
 .btn-border {
@@ -261,6 +294,7 @@ button {
     display: grid;
     gap: 1rem;
     grid-template-columns: auto auto;
+    margin: 0 3rem;
 }
 
 .card {
@@ -376,6 +410,7 @@ button {
 .work_cards .card {
     border-radius: 2px;
     padding: .5rem;
+    margin: 0 3rem;
 }
 
 .work_cards .card:hover {
@@ -439,25 +474,66 @@ form button {
     height: 1rem;
 }
 
-@media screen and (max-width: 1280px) {
-     aside ul{
-        margin-left: -6rem;
-        transform: scale(.8);    }
-  }
 
-  @media screen and (max-width: 910px) {
-    .page{
-       flex-direction: column;
+
+@media screen and (max-width: 1380px) {
+    aside ul {
+        width: 100%;
+        margin-left: -6rem;
+        transform: scale(.8);
     }
-    .hero_img{
+
+    aside li {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 1081px) {
+    aside {
+        width: 100%;
+        top: 88.5%;
+    }
+    .page{
+        height: auto;
+    }
+
+    aside ul {
+        flex-direction: row;
+        transform: scale(1);
+        width: 100%;
+    }
+
+    .page {
+        flex-direction: column;
+    }
+
+    .hero_img {
         margin: auto;
     }
-    
-    aside ul{
-        position: absolute;
-        top: 570px;
-        display: flex;
-        flex-direction: row;
-        left: -10px;
+
+    .publictaion {
+        grid-template-columns: auto auto;
+        gap: 1rem;
     }
+
+    .publictaion .card {
+        margin: 0;
+    }
+
+    .page {
+        padding: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+ .main_nav{
+    display: none;
  }
+ .collapsible{
+    display: block;
+ }
+ content{
+    display: block;
+ }
+}
