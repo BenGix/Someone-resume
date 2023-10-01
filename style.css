@@ -57,7 +57,7 @@ nav {
     top: 0;
 }
 
-.collapsible {
+#collapsible {
     display: none;
     background-color: #A53DFF;
     color: white;
@@ -70,19 +70,21 @@ nav {
     font-size: 15px;
 }
 
-.collapsible-nav{
-    display: block; 
+.collapsible-nav {
+    display: block;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
     background-color: #555;
 }
 
-#content{
+#content {
+    display: none;
     background-color: white;
 }
 
@@ -474,6 +476,10 @@ form button {
     height: 1rem;
 }
 
+footer ul {
+    padding: 0;
+}
+
 
 
 @media screen and (max-width: 1380px) {
@@ -491,10 +497,7 @@ form button {
 @media screen and (max-width: 1081px) {
     aside {
         width: 100%;
-        top: 88.5%;
-    }
-    .page{
-        height: auto;
+        top: 88%;
     }
 
     aside ul {
@@ -505,6 +508,8 @@ form button {
 
     .page {
         flex-direction: column;
+        padding: 1rem;
+        height: auto;
     }
 
     .hero_img {
@@ -520,20 +525,47 @@ form button {
         margin: 0;
     }
 
-    .page {
-        padding: 1rem;
-    }
-
 }
 
 @media screen and (max-width: 850px) {
- .main_nav{
-    display: none;
- }
- .collapsible{
-    display: block;
- }
- content{
-    display: block;
- }
+    .main_nav {
+        display: none;
+    }
+
+    #collapsible {
+        display: block;
+    }
+
+    section{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 560PX) {
+    .sidebar {
+        display: none;
+    }
+
+    footer a{
+        font-size: .8rem;
+    }
+
+    article {
+        text-align: center;
+        margin: 4px;
+    }
+
+    .research_card {
+        grid-template-columns: auto;
+        gap: 0;
+    }
+
+    .card_container:nth-child(2n) {
+        margin-top: 0;
+    }
+
+    .publictaion {
+        grid-template-columns: auto;
+    }
+
 }

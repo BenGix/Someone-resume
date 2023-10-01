@@ -369,7 +369,7 @@
                     </div>
                 </div>
             </section>
-            <section id="Contact">
+            <section>
                 <div class="page page-card">
                     <div>
                     </div>
@@ -450,7 +450,7 @@
                 </div>
             </section>
         </main>
-        <footer>
+        <footer  id="Contact" >
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#Research">Research</a></li>
@@ -481,7 +481,6 @@
 
         window.addEventListener('scroll', function () {
             const verticalScrollPosition = window.scrollY;
-            console.log(verticalScrollPosition)
 
             liElements.forEach(function (li) {
                 li.classList.remove('active');
@@ -491,15 +490,15 @@
             }
             else if (verticalScrollPosition >= 800 && verticalScrollPosition < 1200) {
                 document.getElementById('Research-li').classList.add('active');
-            } else if (verticalScrollPosition >= 1200 && verticalScrollPosition < 2000) {
+            } else if (verticalScrollPosition >= 1200 && verticalScrollPosition < 2500) {
                 document.getElementById('publications-li').classList.add('active');
-            } else if (verticalScrollPosition >= 2000 && verticalScrollPosition < 2800) {
+            } else if (verticalScrollPosition >= 2500 && verticalScrollPosition < 3300) {
                 document.getElementById('What_I_do-li').classList.add('active');
-            } else if (verticalScrollPosition >= 2800) {
+            } else if (verticalScrollPosition >= 3300) {
                 document.getElementById('Contact').classList.add('active');
             }
         });
-        
+
         var coll = document.getElementById("collapsible");
 
         coll.addEventListener("click", function () {
@@ -507,16 +506,17 @@
             var content = document.getElementById("content");
             if (content.style.display === "block") {
                 content.style.display = "none";
+                content.style.height = "0";
             } else {
                 content.style.display = "block";
+                content.style.height = "auto";
             }
         });
 
-
-
-
-
-
+        document.querySelector('a[href="#Contact"]').addEventListener('click', function (e) {
+            console.log("hi")
+            window.scrollTo(0, document.body.scrollHeight);
+        });
 
     </script>
 
