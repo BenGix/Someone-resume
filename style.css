@@ -546,8 +546,12 @@ footer ul {
         display: none;
     }
 
+    footer li{
+        padding: .5rem;
+    }
+
     footer a{
-        font-size: .8rem;
+        font-size: .6rem;
     }
 
     article {
