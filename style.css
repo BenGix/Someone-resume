@@ -84,8 +84,16 @@ nav {
 }
 
 #content {
-    display: none;
     background-color: white;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height .5s ease;
+}
+
+#content  li {
+    border-top: .5px solid #13223823;
+    color: #E6E8EB;
+    background-color: #A53DFF;
 }
 
 ul {
@@ -128,7 +136,7 @@ li {
 a {
     appearance: none;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
@@ -497,7 +505,7 @@ footer ul {
 @media screen and (max-width: 1081px) {
     aside {
         width: 100%;
-        top: 88%;
+        top: 90%;
     }
 
     aside ul {
@@ -508,7 +516,7 @@ footer ul {
 
     .page {
         flex-direction: column;
-        padding: 1rem;
+        padding: 2rem;
         height: auto;
     }
 
@@ -519,6 +527,7 @@ footer ul {
     .publictaion {
         grid-template-columns: auto auto;
         gap: 1rem;
+        margin: 0;
     }
 
     .publictaion .card {
@@ -542,12 +551,22 @@ footer ul {
 }
 
 @media screen and (max-width: 560PX) {
-    .sidebar {
-        display: none;
+    aside {
+        top: 88%;
+        text-align: center;
+    }
+
+    aside li {
+        padding: 1rem .2rem;
+    }
+
+    aside a{
+        font-size: .9rem;
+        font-weight: 700;
     }
 
     footer li{
-        padding: .5rem;
+        padding: 1rem .5rem;
     }
 
     footer a{
@@ -562,6 +581,7 @@ footer ul {
     .research_card {
         grid-template-columns: auto;
         gap: 0;
+        margin: 0;
     }
 
     .card_container:nth-child(2n) {
@@ -570,6 +590,11 @@ footer ul {
 
     .publictaion {
         grid-template-columns: auto;
+    }
+    .work_cards .card {
+        border-radius: 2px;
+        padding: .5rem;
+        margin: 0;
     }
 
 }

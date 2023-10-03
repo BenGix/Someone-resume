@@ -34,7 +34,7 @@
                 </ul>
                 <button id="collapsible">Menu</button>
             </nav>
-            <div id="content">
+            <div id="content" style="max-height: 0px;">
                 <ul class="collapsible-nav">
                     <li id="Home-li" class="active"><a href="#Home">Home</a></li>
                     <li><a href="#Research">Research</a></li>
@@ -49,7 +49,7 @@
                     <li id="Research-li"><a href="#Research">Research</a></li>
                     <li id="publications-li"><a href="#publications">publications</a></li>
                     <li id="What_I_do-li"><a href="#What_I_do">What I do</a></li>
-                    <li id="Contact"><a href="#Contact">Contact</a></li>
+                    <li id="Contact-li"><a href="#Contact">Contact</a></li>
                 </ul>
             </aside>
         </header>
@@ -369,7 +369,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="Contact">
                 <div class="page page-card">
                     <div>
                     </div>
@@ -450,7 +450,7 @@
                 </div>
             </section>
         </main>
-        <footer  id="Contact" >
+        <footer>
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#Research">Research</a></li>
@@ -495,7 +495,7 @@
             } else if (verticalScrollPosition >= 2500 && verticalScrollPosition < 3300) {
                 document.getElementById('What_I_do-li').classList.add('active');
             } else if (verticalScrollPosition >= 3300) {
-                document.getElementById('Contact').classList.add('active');
+                document.getElementById('Contact-li').classList.add('active');
             }
         });
 
@@ -504,17 +504,15 @@
         coll.addEventListener("click", function () {
             this.classList.toggle("active");
             var content = document.getElementById("content");
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                content.style.height = "0";
+            if (content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
             } else {
-                content.style.display = "block";
-                content.style.height = "auto";
+                content.style.maxHeight = "500px"; // or any value larger than the content's height
             }
         });
 
+
         document.querySelector('a[href="#Contact"]').addEventListener('click', function (e) {
-            console.log("hi")
             window.scrollTo(0, document.body.scrollHeight);
         });
 
