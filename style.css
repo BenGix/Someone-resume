@@ -58,6 +58,13 @@ nav {
     top: 0;
 }
 
+.main_nav li:hover{
+    border-radius: 2px;
+    background: var(--primary-500, #A53DFF);
+    color: white !important;
+    transition: .5s;
+}
+
 #collapsible {
     display: none;
     background-color: #A53DFF;
@@ -107,6 +114,7 @@ ul {
     border-radius: 2px;
     background: var(--primary-500, #A53DFF);
     color: white !important;
+    transition: 1s;
 }
 
 aside {
