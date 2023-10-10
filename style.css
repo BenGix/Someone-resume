@@ -11,6 +11,7 @@ body {
 
 * {
     font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 .site_wrapper {
@@ -110,8 +111,10 @@ ul {
 
 aside {
     position: fixed;
-    width: 8rem;
-    top: 5rem;
+    width: 11rem;
+    text-align: center;
+    /* top: 5rem; */
+    margin-left: 2rem;
     left: -100rem;
     transition: all 1s ease;
 }
@@ -119,7 +122,8 @@ aside {
 aside ul {
     width: 100%;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0px;
+    margin: 0px;
 }
 
 aside li {
@@ -493,7 +497,7 @@ footer ul {
 @media screen and (max-width: 1380px) {
     aside ul {
         width: 100%;
-        margin-left: -6rem;
+        margin-left: 0rem;
         transform: scale(.8);
     }
 
@@ -505,13 +509,20 @@ footer ul {
 @media screen and (max-width: 1081px) {
     aside {
         width: 100%;
-        top: 90%;
+        bottom: 0px;
+        margin-left: 0rem;
+        
     }
 
     aside ul {
         flex-direction: row;
         transform: scale(1);
         width: 100%;
+        
+    }
+
+    aside li{
+        margin: 0px;
     }
 
     .page {
@@ -552,7 +563,7 @@ footer ul {
 
 @media screen and (max-width: 560PX) {
     aside {
-        top: 88%;
+        /* top: 88%; */
         text-align: center;
     }
 
