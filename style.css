@@ -311,6 +311,13 @@ button {
     color: #A53DFF;
     border: 1px solid #A53DFF;
 }
+.btn-border-lang {
+    background: transparent;
+    color: #A53DFF;
+    border: 1px solid #A53DFF;
+    cursor: default;
+    padding: ;
+}
 
 .research_card {
     display: grid;
