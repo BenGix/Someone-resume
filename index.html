@@ -45,7 +45,7 @@
             </div>
             <aside class="sidebar">
                 <ul>
-                    <li id="farzad"><a href="#Home">Home</a></li>
+                    <li id="Home-li"><a href="#Home">Home</a></li>
                     <li id="Research-li"><a href="#Research">Research</a></li>
                     <li id="publications-li"><a href="#publications">publications</a></li>
                     <li id="What_I_do-li"><a href="#What_I_do">What I do</a></li>
@@ -479,25 +479,31 @@
 
         let liElements = document.querySelectorAll('ul li');
 
-        window.addEventListener('scroll', function () {
-            const verticalScrollPosition = window.scrollY;
+        function activateNavOnScroll(entries, observer) {
+            entries.forEach(entry => {
+                // Get all li elements
+                const liElements = document.querySelectorAll('li');
 
-            liElements.forEach(function (li) {
-                li.classList.remove('active');
+                if (entry.isIntersecting) {
+                    // Remove 'active' class from all li elements
+                    liElements.forEach(li => {
+                        li.classList.remove('active');
+                    });
+
+                    // Add 'active' class to the current li element
+                    document.querySelector(`#${entry.target.id}-li`).classList.add('active');
+                }
             });
-            if (verticalScrollPosition >= 0 && verticalScrollPosition < 800) {
-                document.getElementById('farzad').classList.add('active');
-            }
-            else if (verticalScrollPosition >= 800 && verticalScrollPosition < 1200) {
-                document.getElementById('Research-li').classList.add('active');
-            } else if (verticalScrollPosition >= 1200 && verticalScrollPosition < 2500) {
-                document.getElementById('publications-li').classList.add('active');
-            } else if (verticalScrollPosition >= 2500 && verticalScrollPosition < 3300) {
-                document.getElementById('What_I_do-li').classList.add('active');
-            } else if (verticalScrollPosition >= 3300) {
-                document.getElementById('Contact-li').classList.add('active');
-            }
+        }
+
+
+        let observer = new IntersectionObserver(activateNavOnScroll);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
         });
+
+
 
         var coll = document.getElementById("collapsible");
 

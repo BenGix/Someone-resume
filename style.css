@@ -173,6 +173,8 @@ section:nth-child(even) {
 section {
     width: 100%;
     padding: 4rem 0;
+    margin: 2rem 0rem;
+    min-height: 100vh;
 }
 
 footer {
