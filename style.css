@@ -58,7 +58,7 @@ nav {
     top: 0;
 }
 
-.main_nav li:hover{
+.main_nav li:hover {
     border-radius: 2px;
     background: var(--primary-500, #A53DFF);
     color: white !important;
@@ -98,7 +98,7 @@ nav {
     transition: max-height .5s ease;
 }
 
-#content  li {
+#content li {
     border-top: .5px solid #13223823;
     color: #E6E8EB;
     background-color: #A53DFF;
@@ -198,7 +198,7 @@ footer ul {
     align-content: center;
 }
 
-.top-btn{
+.top-btn {
     text-align: center;
 }
 
@@ -316,6 +316,7 @@ button {
     color: #A53DFF;
     border: 1px solid #A53DFF;
 }
+
 .btn-border-lang {
     background: transparent;
     color: #A53DFF;
@@ -336,9 +337,12 @@ button {
     border-radius: 12px;
     background: #FFF;
     transition: all .5s ease-in-out;
+
+
 }
 
-.research_card .card{
+
+.research_card .card {
     margin-left: .4rem;
     width: 49%;
     height: 19rem;
@@ -378,11 +382,12 @@ button {
     margin-top: 0rem;
 }
 
-.card_container{
+.card_container {
     align-items: center;
     justify-content: center;
-    
+
 }
+
 .card_container div {
     margin-top: .7rem;
 }
@@ -417,17 +422,20 @@ button {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 1rem;
+    justify-content: center;
 }
 
 .publictaion .card {
     padding: 0;
     border: 1px solid #E6E8EB;
+
 }
 
 .publictaion .card {
     margin: 0 1rem;
     padding: 0;
     border: 1px solid #E6E8EB;
+
 }
 
 .publictaion .card img {
@@ -528,9 +536,11 @@ footer ul {
         margin-left: 0rem;
         transform: scale(.8);
     }
-    .research_card .card{
+
+    .research_card .card {
         width: 48%;
     }
+
     aside li {
         flex-grow: 1;
     }
@@ -541,20 +551,20 @@ footer ul {
         width: 100%;
         bottom: 0px;
         margin-left: 0rem;
-        
+
     }
 
     aside ul {
         flex-direction: row;
         transform: scale(1);
         width: 100%;
-        
+
     }
 
-    aside li{
+    aside li {
         margin: 0px;
     }
-    
+
     .page {
         flex-direction: column;
         padding: 2rem;
@@ -569,6 +579,9 @@ footer ul {
         grid-template-columns: auto auto;
         gap: 1rem;
         margin: 0;
+
+
+
     }
 
     .publictaion .card {
@@ -586,7 +599,7 @@ footer ul {
         display: block;
     }
 
-    section{
+    section {
         padding: 0;
     }
 }
@@ -601,16 +614,16 @@ footer ul {
         padding: 1rem .2rem;
     }
 
-    aside a{
+    aside a {
         font-size: .9rem;
         font-weight: 700;
     }
 
-    footer li{
+    footer li {
         padding: 1rem .5rem;
     }
 
-    footer a{
+    footer a {
         font-size: .6rem;
     }
 
@@ -619,9 +632,10 @@ footer ul {
         margin: 4px;
     }
 
-    .research_card .card{
+    .research_card .card {
         width: 100%;
     }
+
     .research_card {
         grid-template-columns: auto;
         gap: 0;
@@ -634,7 +648,9 @@ footer ul {
 
     .publictaion {
         grid-template-columns: auto;
+
     }
+
     .work_cards .card {
         border-radius: 2px;
         padding: .5rem;
@@ -642,53 +658,63 @@ footer ul {
     }
 
 }
+
 /* CSS */
 /* The modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black with opacity */
-    
-  }
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black with opacity */
 
-  .modal h3 {
+}
+
+.modal h3 {
     text-align: center;
     font-weight: bolder;
     font-size: 1.2rem;
     padding: 3rem;
-  }
-  .modal p {
+}
+
+.modal p {
     font-size: 1rem;
     padding: 1rem 2rem;
-  }
-  
-  /* The modal content */
-  .modal-content {
+}
+
+/* The modal content */
+.modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 65%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The close button */
-  .close {
+    width: 65%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The close button */
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-  
+}
