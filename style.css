@@ -211,7 +211,7 @@ section {
 }
 
 #Publication .section-icon {
-    padding: .4rem;
+    padding: .4rem .15rem;
 }
 
 #Awards .section-icon {
@@ -233,7 +233,7 @@ section {
     width: 62.75%;
 }
 
-#Researche .section-wrapper {
+#skills .section-wrapper {
     flex-wrap: wrap;
 }
 
@@ -477,6 +477,24 @@ article button {
     aside {
         scale: .8;
     }
+
+    h1 {
+        text-align: start;
+    }
+
+    h2 {
+        text-align: start;
+    }
+
+    h3 {
+        text-align: start;
+    }
+
+    h4 {
+        text-align: start;
+    }
+
+
 }
 
 @media screen and (max-width: 968px) {
@@ -544,11 +562,11 @@ article button {
     }
 
     .section-header {
-        width: 90%;
+        width: 85%;
     }
 
     .section-wrapper {
-        width: 90%;
+        width: 85%;
     }
 
 
@@ -556,14 +574,18 @@ article button {
 
 @media screen and (max-width: 560PX) {
     .section-header {
-        width: 95%;
+        width: 90%;
     }
 
     .section-wrapper {
-        width: 95%;
+        width: 90%;
     }
 
     .page {
-        max-width: 95%;
+        max-width: 90%;
+    }
+
+    .card-wrapper {
+        margin-left: .3rem;
     }
 }
