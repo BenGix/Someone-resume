@@ -62,7 +62,7 @@ nav {
     text-wrap: nowrap;
 }
 
-.main_nav li:hover {
+.main_nav a:hover {
     border-radius: 2px;
     background: var(--primary-500, #A53DFF);
     color: white !important;
@@ -101,7 +101,7 @@ nav {
     transition: max-height .5s ease;
 }
 
-#content li {
+#content a {
     border-top: .5px solid #13223823;
     color: #E6E8EB;
     background-color: #A53DFF;
@@ -122,7 +122,7 @@ ul {
 
 aside {
     position: fixed;
-    width: 11rem;
+    /* width: 11rem; */
     text-align: center;
     /* top: 5rem; */
     margin-left: 2rem;
@@ -138,17 +138,16 @@ aside ul {
 }
 
 aside li {
+    padding: .75rem;
     margin: 1rem 0;
     background-color: #e6e8eb7e;
     backdrop-filter: blur(12px);
 }
 
-li {
-    padding: .75rem 1.25rem;
-    color: #333333;
-}
 
 a {
+    padding: .75rem 1.25rem;
+    color: #333333;
     appearance: none;
     text-decoration: none;
     font-size: 1rem;
@@ -156,6 +155,9 @@ a {
     font-weight: 500;
     line-height: 24px;
     color: inherit;
+}
+aside li a{
+    padding: .5rem 1rem;
 }
 
 main {
@@ -226,7 +228,7 @@ footer {
     background: #2B384C;
 }
 
-footer li {
+footer a {
     color: var(--gray-50, #e0e0e0c2);
     font-weight: 200;
 }
@@ -400,17 +402,41 @@ article button {
     background: #FFF;
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
     padding: 1rem 2rem 1rem 1rem;
+    margin: 0 0 .5rem .8rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card-s{
+    flex-grow: 1;
+    text-align: center;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
+    padding: 1rem 1rem 1rem 1rem;
+    margin-right: .5rem;
     display: flex;
     flex-direction: column;
 }
 
+.p1{
+    display: inline;
+}
 
 
+@media screen and (max-width: 1320px) {
+    
+}
 
-@media screen and (max-width: 1320px) {}
+@media screen and (max-width: 968px) {
+    
+}
 
-@media screen and (max-width: 968px) {}
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 768px) {}
+}
 
-@media screen and (max-width: 560PX) {}
+@media screen and (max-width: 560PX) {
+
+}
