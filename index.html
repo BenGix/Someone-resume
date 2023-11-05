@@ -653,7 +653,7 @@
     <script>
         let initialPosition;
 
-        window.addEventListener('scroll', function () {
+        function handleScroll() {
             let sidebar = document.querySelector('.sidebar');
             if (window.scrollY > 50) {
                 if (!initialPosition) {
@@ -662,9 +662,12 @@
                 sidebar.style.left = '0rem';
             } else {
                 sidebar.style.left = initialPosition;
-                initialPosition = null;
             }
-        });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+
 
 
         const liElements = document.querySelectorAll('ul li');
@@ -675,6 +678,7 @@
         };
 
         function activateNavOnScroll(entries, observer) {
+
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     // Remove 'active' class from all li elements
