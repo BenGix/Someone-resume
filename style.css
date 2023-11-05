@@ -89,6 +89,11 @@ nav {
     padding: 0;
 }
 
+.collapsible-nav li {
+    margin: 1rem 0;
+
+}
+
 .active,
 .collapsible:hover {
     background-color: #555;
@@ -465,6 +470,8 @@ article button {
     }
 }
 
+
+
 @media screen and (max-width: 1320px) {
     .page-card {
         padding: 1rem;
@@ -502,6 +509,18 @@ article button {
         display: none;
     }
 
+    .main_nav {
+        display: none;
+    }
+
+    #collapsible {
+        display: block;
+    }
+
+    section {
+        padding: 1rem 0;
+        margin: 1rem 0;
+    }
 
     .page {
         flex-direction: column;
