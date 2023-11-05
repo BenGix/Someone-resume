@@ -469,7 +469,7 @@
                             </h4>
                             <p>
                                 This review article discusses the biology of cancer stem cells
-                                and their role in tumor progression and resistance to therapy.. 
+                                and their role in tumor progression and resistance to therapy..
                             </p>
                         </div>
                         <div class="card">
@@ -479,7 +479,8 @@
                             </h4>
                             <p>
                                 This review article examines the current state of breast
-                                cancer awareness and treatment in different parts of the world, with a focus on the unique
+                                cancer awareness and treatment in different parts of the world, with a focus on the
+                                unique
                                 challenges faced by women in developing countries.
                             </p>
                         </div>
@@ -573,7 +574,8 @@
                                 </p>
                             </h4>
                             <h4>
-                                Artificial Intelligence for Breast Cancer Detection, Johns Hopkins University on Coursera
+                                Artificial Intelligence for Breast Cancer Detection, Johns Hopkins University on
+                                Coursera
                                 <p class="p1">
                                     2023
                                 </p>
@@ -591,7 +593,8 @@
                                 </p>
                             </h4>
                             <h4>
-                                Health After Cancer: Cancer Survivorship for Primary Care, Stanford University on Coursera
+                                Health After Cancer: Cancer Survivorship for Primary Care, Stanford University on
+                                Coursera
                                 <p class="p1">
                                     2023
                                 </p>
@@ -664,13 +667,15 @@
         });
 
 
-        let liElements = document.querySelectorAll('ul li');
+        const liElements = document.querySelectorAll('ul li');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5 // Adjust this threshold as needed
+        };
 
         function activateNavOnScroll(entries, observer) {
             entries.forEach(entry => {
-                // Get all li elements
-                const liElements = document.querySelectorAll('li');
-
                 if (entry.isIntersecting) {
                     // Remove 'active' class from all li elements
                     liElements.forEach(li => {
@@ -683,120 +688,26 @@
             });
         }
 
-
-        let observer = new IntersectionObserver(activateNavOnScroll);
+        const observer = new IntersectionObserver(activateNavOnScroll, observerOptions);
 
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
         });
 
-
-
-        var coll = document.getElementById("collapsible");
+        const coll = document.getElementById("collapsible");
 
         coll.addEventListener("click", function () {
             this.classList.toggle("active");
-            var content = document.getElementById("content");
-            if (content.style.maxHeight !== "0px") {
-                content.style.maxHeight = "0px";
-            } else {
-                content.style.maxHeight = "500px"; // or any value larger than the content's height
-            }
+            const content = document.getElementById("content");
+            content.style.maxHeight = (content.style.maxHeight === "0px") ? "500px" : "0px";
         });
 
-
-        document.querySelector('a[href="#Contact"]').addEventListener('click', function (e) {
-            window.scrollTo(0, document.body.scrollHeight);
+        const contactLink = document.querySelector('a[href="#Contact"]');
+        contactLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            const contactSection = document.getElementById("Contact");
+            contactSection.scrollIntoView({ behavior: "smooth" });
         });
-
-        // JavaScript
-        // Get the buttons
-        var btn1 = document.getElementById("btn1");
-        var btn2 = document.getElementById("btn2");
-        var btn3 = document.getElementById("btn3");
-        var btn4 = document.getElementById("btn4");
-        var btn5 = document.getElementById("btn5");
-        var btn6 = document.getElementById("btn6");
-        var btn7 = document.getElementById("btn7");
-
-        // Get the modals
-        var modal1 = document.getElementById("modal1");
-        var modal2 = document.getElementById("modal2");
-        var modal3 = document.getElementById("modal3");
-        var modal4 = document.getElementById("modal4");
-        var modal5 = document.getElementById("modal5");
-        var modal6 = document.getElementById("modal6");
-        var modal7 = document.getElementById("modal7");
-
-        // Get the close buttons
-        var close1 = document.querySelector("[data-modal=modal1]");
-        var close2 = document.querySelector("[data-modal=modal2]");
-        var close3 = document.querySelector("[data-modal=modal3]");
-        var close4 = document.querySelector("[data-modal=modal4]");
-        var close5 = document.querySelector("[data-modal=modal5]");
-        var close6 = document.querySelector("[data-modal=modal6]");
-        var close7 = document.querySelector("[data-modal=modal7]");
-
-        // When the user clicks on button 1, open modal 1
-        btn1.onclick = function () {
-            modal1.style.display = "block";
-        }
-
-        // When the user clicks on button 2, open modal 2
-        btn2.onclick = function () {
-            modal2.style.display = "block";
-        }
-        // When the user clicks on button 3, open modal 3
-        btn3.onclick = function () {
-            modal3.style.display = "block";
-        }
-        // When the user clicks on button 4, open modal 4
-        btn4.onclick = function () {
-            modal4.style.display = "block";
-        }
-        // When the user clicks on button 5, open modal 5
-        btn5.onclick = function () {
-            modal5.style.display = "block";
-        }
-        // When the user clicks on button 6, open modal 6
-        btn6.onclick = function () {
-            modal6.style.display = "block";
-        }
-        // When the user clicks on button 7, open modal 7
-        btn7.onclick = function () {
-            modal7.style.display = "block";
-        }
-
-        // When the user clicks on close button, close the modal
-        close1.onclick = function () {
-            modal1.style.display = "none";
-        }
-
-        close2.onclick = function () {
-            modal2.style.display = "none";
-        }
-        close3.onclick = function () {
-            modal3.style.display = "none";
-        }
-        close4.onclick = function () {
-            modal4.style.display = "none";
-        }
-        close5.onclick = function () {
-            modal5.style.display = "none";
-        }
-        close6.onclick = function () {
-            modal6.style.display = "none";
-        }
-        close7.onclick = function () {
-            modal7.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal1 || event.target == modal2 || event.target == modal3 || event.target == modal4 || event.target == modal5 || event.target == modal6 || event.target == modal7) {
-                event.target.style.display = "none";
-            }
-        }
 
     </script>
 
