@@ -156,7 +156,8 @@ a {
     line-height: 24px;
     color: inherit;
 }
-aside li a{
+
+aside li a {
     padding: .5rem 1rem;
 }
 
@@ -204,8 +205,24 @@ section {
     width: 2.6rem;
     background-color: #A53DFF;
     border-radius: 2.5px;
-    padding: .5rem .3rem .3rem .3rem;
+    padding: .3rem .3rem .3rem .3rem;
     margin-right: .5rem;
+}
+
+#Publication .section-icon {
+    padding: .4rem;
+}
+
+#Awards .section-icon {
+    padding: .4rem 0rem .1rem .1rem;
+}
+
+#Licenses .section-icon {
+    padding: .0rem 0rem .2rem .1rem;
+}
+
+#Licenses .section-icon svg {
+    scale: .86;
 }
 
 /* section-body */
@@ -405,10 +422,10 @@ article button {
     margin: 0 0 .5rem .8rem;
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.card-s{
+.card-s {
     flex-grow: 1;
     text-align: center;
     border-radius: 6px;
@@ -420,23 +437,15 @@ article button {
     flex-direction: column;
 }
 
-.p1{
+.p1 {
     display: inline;
 }
 
 
-@media screen and (max-width: 1320px) {
-    
-}
+@media screen and (max-width: 1320px) {}
 
-@media screen and (max-width: 968px) {
-    
-}
+@media screen and (max-width: 968px) {}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {}
 
-}
-
-@media screen and (max-width: 560PX) {
-
-}
+@media screen and (max-width: 560PX) {}
