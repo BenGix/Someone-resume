@@ -52,7 +52,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    max-width: 1320px;
+    max-width: 62.75^;
     margin: auto;
     top: 0;
 }
@@ -125,9 +125,10 @@ aside {
     /* width: 11rem; */
     text-align: center;
     /* top: 5rem; */
-    margin-left: 2rem;
+    margin-left: 1rem;
     left: -100rem;
     transition: all 1s ease;
+    transform-origin: left center;
 }
 
 aside ul {
@@ -197,7 +198,7 @@ section {
 
 .section-header {
     display: flex;
-    width: 82.5rem;
+    width: 62.75%;
 }
 
 .section-icon {
@@ -229,8 +230,11 @@ section {
 .section-wrapper {
     display: flex;
     margin: 2rem 0;
-    width: 1320px;
+    width: 62.75%;
+}
 
+#Researche .section-wrapper {
+    flex-wrap: wrap;
 }
 
 .vertical_line {
@@ -255,7 +259,7 @@ footer ul {
 }
 
 .page {
-    max-width: 82.5rem;
+    max-width: 62.75%;
     margin: auto;
     display: flex;
     align-content: center;
@@ -270,7 +274,7 @@ footer ul {
 }
 
 .hero_img {
-    margin: auto 5rem auto 10rem;
+    margin: auto 5rem auto 5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -320,7 +324,7 @@ h3 {
 h4 {
     color: #2B384C;
     text-align: justify;
-    font-size: 20px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: 2rem;
@@ -335,7 +339,7 @@ p {
     font-weight: 400;
     line-height: 1.5rem;
     margin: .3rem;
-
+    text-align: justify;
 }
 
 
@@ -422,7 +426,7 @@ article button {
     margin: 0 0 .5rem .8rem;
     display: flex;
     flex-direction: column;
-
+    transition: all .5s ease;
 }
 
 .card-s {
@@ -432,20 +436,134 @@ article button {
     background: #FFF;
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
     padding: 1rem 1rem 1rem 1rem;
-    margin-right: .5rem;
+    margin: .5rem;
     display: flex;
     flex-direction: column;
+    transition: all 1s ease;
+}
+
+.card:hover,
+.card-s.card-s:hover {
+    scale: 1.02;
 }
 
 .p1 {
     display: inline;
 }
 
+@media screen and (max-width: 1620px) {
+    .page-card {
+        padding: 5rem;
+    }
 
-@media screen and (max-width: 1320px) {}
+    .hero_img {
+        margin: auto auto auto auto;
+    }
 
-@media screen and (max-width: 968px) {}
+    aside {
+        scale: .9;
+    }
+}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 1320px) {
+    .page-card {
+        padding: 1rem;
+    }
 
-@media screen and (max-width: 560PX) {}
+    .hero_img {
+        margin: auto auto auto auto;
+    }
+
+    aside {
+        scale: .8;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    aside {
+        display: none;
+    }
+
+
+    .page {
+        flex-direction: column;
+    }
+
+    .hero_img {
+        margin: auto auto auto 3.5rem;
+    }
+
+    .page {
+        max-width: 80%;
+    }
+
+    .section-header {
+        width: 80%;
+    }
+
+    .section-wrapper {
+        width: 80%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero_img {
+        margin: auto auto auto auto;
+    }
+
+    article {
+        margin: auto auto auto auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+
+    p {
+
+        font-size: .8rem;
+    }
+
+    .page {
+        max-width: 90%;
+    }
+
+    .section-header {
+        width: 90%;
+    }
+
+    .section-wrapper {
+        width: 90%;
+    }
+
+
+}
+
+@media screen and (max-width: 560PX) {
+    .section-header {
+        width: 95%;
+    }
+
+    .section-wrapper {
+        width: 95%;
+    }
+
+    .page {
+        max-width: 95%;
+    }
+}
