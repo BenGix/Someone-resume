@@ -22,7 +22,7 @@ body {
 
 header {
     position: sticky;
-    padding: 0rem;
+    padding: 0rem 2rem;
     background-color: transparent;
 }
 
@@ -620,5 +620,11 @@ article button {
 
     .card-wrapper {
         margin-left: .3rem;
+    }
+    footer a{
+        padding: .75rem .5rem;
+    }
+    footer ul{
+        padding:0;
     }
 }
