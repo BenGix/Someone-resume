@@ -542,7 +542,21 @@ article button {
         width: 80%;
     }
 
+    header {
+        margin: 0;
+        padding: 0 1rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #FFF;
+    }
 
+    #content a{
+        background-color: white;
+        color: #A53DFF;
+        font-weight: bold;
+        
+    }
 }
 
 @media screen and (max-width: 768px) {
