@@ -24,6 +24,7 @@ header {
     position: sticky;
     padding: 0rem 2rem;
     background-color: transparent;
+    z-index: 10;
 }
 
 .brand_container {
@@ -148,6 +149,12 @@ aside li {
     margin: 1rem 0;
     background-color: #e6e8eb7e;
     backdrop-filter: blur(12px);
+    transition: all .5s ease ;
+}
+
+aside li:hover {
+    background-color: #A53DFF;
+    color: #FFF;
 }
 
 
@@ -220,7 +227,7 @@ section {
 }
 
 #Awards .section-icon {
-    padding: .4rem 0rem .1rem .1rem;
+    padding: .3rem 0rem .1rem .6rem;
 }
 
 #Licenses .section-icon {
@@ -293,6 +300,7 @@ footer ul {
     object-fit: cover;
     aspect-ratio: 3 / 4;
 }
+
 
 /* Typography */
 article {
@@ -385,6 +393,7 @@ article button {
     background: #FFF;
     position: relative;
     top: -2rem;
+    z-index: 1;
 }
 
 .btn-container a {
