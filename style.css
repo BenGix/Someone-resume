@@ -149,13 +149,14 @@ aside li {
     margin: 1rem 0;
     background-color: #e6e8eb7e;
     backdrop-filter: blur(12px);
-    transition: all .5s ease ;
+    transition: all .5s ease;
 }
 
 aside li:hover {
     background-color: #A53DFF;
     color: #FFF;
 }
+
 
 
 a {
@@ -210,13 +211,13 @@ section {
 
 .section-header {
     display: flex;
-    width: 62.75%;
+    width: 55.75%;
 }
 
 .section-icon {
     height: 2.6rem;
     width: 2.6rem;
-    background-color: #A53DFF;
+    background-color: transparent;
     border-radius: 2.5px;
     padding: .3rem .3rem .3rem .3rem;
     margin-right: .5rem;
@@ -242,7 +243,7 @@ section {
 .section-wrapper {
     display: flex;
     margin: 2rem 0;
-    width: 62.75%;
+    width: 55.75%;
 }
 
 #skills .section-wrapper {
@@ -319,11 +320,15 @@ h1 {
 
 h2 {
     color: #132238;
-    font-size: 3rem;
+    font-size: 2rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 2.5rem;
     margin: 0;
+}
+
+.icon-inner {
+    fill: white;
 }
 
 h3 {
@@ -410,6 +415,10 @@ article button {
     fill: white;
 }
 
+
+svg path {
+    fill: #A53DFF;
+}
 
 .btn-border {
     background: transparent;
@@ -560,11 +569,11 @@ article button {
         background-color: #FFF;
     }
 
-    #content a{
+    #content a {
         background-color: white;
         color: #A53DFF;
         font-weight: bold;
-        
+
     }
 }
 
@@ -630,10 +639,12 @@ article button {
     .card-wrapper {
         margin-left: .3rem;
     }
-    footer a{
+
+    footer a {
         padding: .75rem .5rem;
     }
-    footer ul{
-        padding:0;
+
+    footer ul {
+        padding: 0;
     }
 }
