@@ -228,7 +228,7 @@ section {
 }
 
 #Awards .section-icon {
-    padding: .3rem 0rem .1rem .6rem;
+    padding: .3rem 0rem .1rem rem;
 }
 
 #Licenses .section-icon {
@@ -633,7 +633,12 @@ svg path {
     .section-wrapper {
         width: 85%;
     }
-
+    .card-s h4 {
+        font-size: .8rem;
+    }
+    .card-s {
+        padding: .3rem;
+    }
 
 }
 
