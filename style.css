@@ -260,6 +260,10 @@ section {
 footer {
     z-index: 100;
     background: #2B384C;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer a {
@@ -269,6 +273,7 @@ footer a {
 
 footer ul {
     justify-content: center;
+    margin: 0;
 }
 
 .page {
