@@ -465,6 +465,9 @@ svg path {
     transition: all 1s ease;
     max-width: 15rem;
 }
+.card-s h4 {
+    text-align: center ;
+}
 
 .card:hover,
 .card-s.card-s:hover {
