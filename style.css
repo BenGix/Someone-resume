@@ -475,6 +475,10 @@ svg path {
     display: inline;
 }
 
+.top-btn a{
+    padding: 0 !important;
+}
+
 @media screen and (max-width: 1620px) {
     .page-card {
         padding: 5rem;
@@ -522,6 +526,7 @@ svg path {
 
 
 }
+
 
 @media screen and (max-width: 968px) {
     aside {
