@@ -463,6 +463,7 @@ svg path {
     display: flex;
     flex-direction: column;
     transition: all 1s ease;
+    max-width: 15rem;
 }
 
 .card:hover,
