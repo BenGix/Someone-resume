@@ -603,6 +603,10 @@ svg path {
 }
 
 @media screen and (max-width: 768px) {
+    header {
+        position: fixed;
+    }
+
     .hero_img {
         margin: auto auto auto auto;
     }
