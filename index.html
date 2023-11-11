@@ -19,7 +19,7 @@
     <div class="site_wrapper">
         <header>
             <nav>
-                <a class="brand_container">
+                <a href="#Home" class="brand_container">
                     <div class="logo">
                         <span>M</span>
                     </div>
@@ -573,10 +573,10 @@
     <footer>
         <ul>
             <li><a href="#Home">Home</a></li>
-            <li><a href="#Education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="mailto:hi@imbiologist.com">Email: hi@imbiologist.com</a></li>
+            <!-- <li><a href="#skills">Skills</a></li>
             <li><a href="#Work">Work Experience</a></li>
-            <li><a href="#Publication">Publication</a></li>
+            <li><a href="#Publication">Publication</a></li> -->
         </ul>
     </footer>
     </div>
@@ -626,20 +626,19 @@
         // });
 
         const coll = document.getElementById("collapsible");
+        const content = document.getElementById("content");
 
         coll.addEventListener("click", function () {
             this.classList.toggle("active");
-            const content = document.getElementById("content");
             content.style.maxHeight =
                 content.style.maxHeight === "0px" ? "500px" : "0px";
         });
         function collapse() {
-            console.log("clicked");
             coll.classList.remove("active");
-            const content = document.getElementById("content");
             content.style.maxHeight =
                 content.style.maxHeight === "0px" ? "500px" : "0px";
         };
+
     </script>
 </body>
 
