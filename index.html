@@ -36,14 +36,14 @@
                     <li><a href="#Licenses">Licenses and Certificates</a></li>
                 </ul>
                 <button id="collapsible">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" class="icon-inner"
+                    <svg id="collaps_1" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                        <path id="collaps_2" fill-rule="evenodd" clip-rule="evenodd" class="icon-inner"
                             d="M0.25 1C0.25 0.585786 0.585786 0.25 1 0.25H19C19.4142 0.25 19.75 0.585786 19.75 1C19.75 1.41421 19.4142 1.75 19 1.75H1C0.585786 1.75 0.25 1.41421 0.25 1Z"
                             fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" class="icon-inner"
+                        <path id="collaps_3" fill-rule="evenodd" clip-rule="evenodd" class="icon-inner"
                             d="M0.25 6C0.25 5.58579 0.585786 5.25 1 5.25H19C19.4142 5.25 19.75 5.58579 19.75 6C19.75 6.41421 19.4142 6.75 19 6.75H1C0.585786 6.75 0.25 6.41421 0.25 6Z"
                             fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" class="icon-inner"
+                        <path id="collaps_4" fill-rule="evenodd" clip-rule="evenodd" class="icon-inner"
                             d="M0.25 11C0.25 10.5858 0.585786 10.25 1 10.25H19C19.4142 10.25 19.75 10.5858 19.75 11C19.75 11.4142 19.4142 11.75 19 11.75H1C0.585786 11.75 0.25 11.4142 0.25 11Z"
                             fill="white" />
                     </svg>
@@ -627,7 +627,10 @@
 
         const coll = document.getElementById("collapsible");
         const content = document.getElementById("content");
-
+        const collaps_1 = document.getElementById("collaps_1");
+        const collaps_2 = document.getElementById("collaps_2");
+        const collaps_3 = document.getElementById("collaps_3");
+        const collaps_4 = document.getElementById("collaps_4");
         coll.addEventListener("click", function () {
             this.classList.toggle("active");
             content.style.maxHeight =
@@ -638,7 +641,14 @@
             content.style.maxHeight =
                 content.style.maxHeight === "0px" ? "500px" : "0px";
         };
-
+        document.addEventListener('click', function (event) {
+            console.log(event.target);
+            if (event.target !== coll && event.target !== collaps_1 && event.target !== collaps_2 && event.target !== collaps_3 && event.target !== collaps_4 ) {
+                coll.classList.remove("active");
+            content.style.maxHeight ="0px";
+               
+   }
+});
     </script>
 </body>
 
