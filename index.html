@@ -26,7 +26,7 @@
                     <h1 class="navbar-brand" href="#">Maedeh</h1>
                 </a>
                 <ul class="main_nav">
-                    <li href="#Home"><a href="#Home">Home</a></li>
+                    <!-- <li href="#Home"><a href="#Home">Home</a></li> -->
                     <li><a href="#Education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#Researche">Researche Experience</a></li>
@@ -36,7 +36,8 @@
                     <li><a href="#Licenses">Licenses and Certificates</a></li>
                 </ul>
                 <button id="collapsible">
-                    <svg id="collaps_1" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                    <svg id="collaps_1" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"
+                        fill="none">
                         <path id="collaps_2" fill-rule="evenodd" clip-rule="evenodd" class="icon-inner"
                             d="M0.25 1C0.25 0.585786 0.585786 0.25 1 0.25H19C19.4142 0.25 19.75 0.585786 19.75 1C19.75 1.41421 19.4142 1.75 19 1.75H1C0.585786 1.75 0.25 1.41421 0.25 1Z"
                             fill="white" />
@@ -643,12 +644,23 @@
         };
         document.addEventListener('click', function (event) {
             // console.log(event.target);
-            if (event.target !== coll && event.target !== collaps_1 && event.target !== collaps_2 && event.target !== collaps_3 && event.target !== collaps_4 ) {
+            if (event.target !== coll && event.target !== collaps_1 && event.target !== collaps_2 && event.target !== collaps_3 && event.target !== collaps_4) {
                 coll.classList.remove("active");
-            content.style.maxHeight ="0px";
-               
-   }
-});
+                content.style.maxHeight = "0px";
+
+            }
+        });
+
+        window.onload = function () {
+            document.querySelectorAll("a[href='#Home']").forEach(function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+        };
+
+
     </script>
 </body>
 

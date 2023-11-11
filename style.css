@@ -268,7 +268,7 @@ footer {
 
 footer a {
     color: var(--gray-50, #e0e0e0c2);
-    font-weight: 200;
+    font-weight: 500;
 }
 
 footer ul {
